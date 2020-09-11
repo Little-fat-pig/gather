@@ -21,6 +21,7 @@ public class FixedThreadPool {
                 }
             });
         }
+        es.shutdown();
     }
     /**
      * 创建一个固定长度的线程池，每当提交一个任务就创建一个线程，
@@ -46,6 +47,7 @@ public class FixedThreadPool {
 
 
         }
+        es.shutdown();
     }
     /**
      *  创建了一个固定长度的线程池，而且以延迟或定时的方式来执行任务
@@ -64,6 +66,7 @@ public class FixedThreadPool {
                 }
             },3,TimeUnit.SECONDS);
         }
+        ses.shutdown();
     }
     /**
      * 这是一个单线程的Executor，它创建单个工作线程来执行任务，
@@ -82,6 +85,7 @@ public class FixedThreadPool {
             });
             System.out.println(Thread.currentThread().getName());
         }
+        es.shutdown();
 
     }
     public static void main(String[] args) {
